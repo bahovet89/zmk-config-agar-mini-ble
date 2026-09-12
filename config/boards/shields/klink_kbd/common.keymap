@@ -88,5 +88,5 @@
         studio_unlock: studio_unlock { display-name = "zmk_reserved_studio_unlock"; };
         #endif
         
-       
+    };   
 };
