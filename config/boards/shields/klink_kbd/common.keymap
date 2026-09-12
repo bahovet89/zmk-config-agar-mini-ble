@@ -56,12 +56,12 @@
             display-name = "Mod-Tap(TP)";
         };
 
-        // lt default: tap preferred. Rename it.
+        // lt default: tap-unless-interrupted. Rename it.
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <3000>;
             quick-tap-ms = <180>;
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap(TP)";
