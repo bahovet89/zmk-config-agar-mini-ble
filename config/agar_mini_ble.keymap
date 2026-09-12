@@ -20,24 +20,6 @@
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap";
         };
-       
-        lm: lm {
-            compatible = "zmk,behavior-macro-two-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <2>;
-            bindings
-                = <&macro_param_1to1>
-                , <&macro_press &mo MACRO_PLACEHOLDER>
-                , <&macro_param_2to1>
-                , <&macro_press &kp MACRO_PLACEHOLDER>
-                , <&macro_pause_for_release>
-                , <&macro_param_2to1>
-                , <&macro_release &kp MACRO_PLACEHOLDER>
-                , <&macro_param_1to1>
-                , <&macro_release &mo MACRO_PLACEHOLDER>
-                ;
-        };
     };
 };
 
@@ -50,17 +32,17 @@
 &kp ESC    &kp Q      &kp W       &kp E  &kp R      &kp T  &kp Y      &kp U  &kp I      &kp O     &kp P       &kp BACKSLASH  &kp BSPC
 &kp TAB    &kp A      &kp S       &kp D  &kp F      &kp G  &kp H      &kp J  &kp K      &kp L     &kp SEMI    &kp ENTER
 &kp LSHFT  &kp Z      &kp X       &kp C  &kp V      &kp B  &kp N      &kp M  &kp COMMA  &kp DOT   &kp RSHIFT  &kp DEL
-           &kp LCTRL  &lm 1 LALT         &kp SPACE         &kp SPACE                    &kp RWIN  &kp SLASH
+           &kp LCTRL  &lt 1 LALT         &kp SPACE         &kp SPACE                    &kp RWIN  &kp SLASH
 
             >;
         };
 
         num_layer {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5  &kp N6  &kp N7    &kp N8    &kp N9     &kp N0      &kp MINUS  &kp EQUAL
-&kp TAB    &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp UP    &kp LBKT   &kp RBKT    &kp SQT
-&kp LSHFT  &trans  &trans  &kp CAPS  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHIFT  &trans
-           &trans  &trans            &trans          &trans                      &mo 2      &trans
+&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4  &kp N5  &kp N6  &kp N7    &kp N8    &kp N9     &kp N0      &kp MINUS  &kp EQUAL
+&kp TAB    &trans    &trans  &trans    &trans  &trans  &trans  &trans    &kp UP    &kp LBKT   &kp RBKT    &kp SQT
+&kp LSHFT  &trans    &trans  &kp CAPS  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHIFT  &trans
+           &kp LALT  &trans            &trans          &trans                      &mo 2      &trans
 
             >;
         };
