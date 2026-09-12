@@ -38,9 +38,8 @@
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <260>;
-            quick-tap-ms = <240>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <3000>;
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap(HP)";
         };
@@ -49,20 +48,18 @@
         mt_tp: mod_tap_tp {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <3000>;
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap(TP)";
         };
 
-        // lt default: tap-unless-interrupted. Rename it.
+        // lt default: hold preferred. Rename it.
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <3000>;
-            quick-tap-ms = <180>;
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap(TP)";
         };
@@ -71,9 +68,8 @@
         lt_hp: layer_tap_hp {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <260>;
-            quick-tap-ms = <240>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <3000>;
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap(HP)";
         };
