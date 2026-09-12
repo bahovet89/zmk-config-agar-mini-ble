@@ -27,12 +27,9 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <3000>;
             bindings = <&mo>, <&kp>;
-            display-name = "Layer-Tap(TP)";
+            display-name = "Layer-Tap";
         };
-    };
-};
         
-
         trans: transparent { display-name = "_Trans"; };
         none: none { display-name = "Key(None)"; };
         
