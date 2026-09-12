@@ -19,6 +19,17 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+/ {
+    behaviors {
+        //output ~ with RShift
+        gresc: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
  lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
